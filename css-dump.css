@@ -1,0 +1,88 @@
+/* =========================================
+   A dump of random CSS.
+   Copy what you want into a new file
+   or remove what you don't want from here.
+========================================= */
+
+
+/* =========================================
+   Right Sidebar Tab Visibilitiy
+========================================= */
+
+.workspace-split.mod-right-split .workspace-tab-header-container {
+    opacity: 0;
+    height: 15px;
+    overflow: hidden;
+    transition: opacity 0.2s ease, height 0.2s ease;
+}
+
+.workspace-tabs.mod-top.mod-top-right-space .workspace-tab-header-container {
+    opacity: 1;
+    height: var(--header-height);
+}
+
+.workspace-split.mod-right-split .workspace-tabs:not(.mod-top-right-space):hover .workspace-tab-header-container {
+    opacity: 1;
+    height: var(--header-height);
+}
+
+
+
+/* =========================================
+   File Explorer Density
+========================================= */
+
+.nav-folder-title,
+.nav-file-title {
+    padding-top: 0.125px !important;
+    padding-bottom: 0.125px !important;
+    font-size: 15px !important;
+}
+
+.nav-folder-title-content,
+.nav-file-title-content {
+    margin-left: 5px !important;
+}
+
+.nav-folder-children {
+    padding-left: 10px !important;
+}
+
+
+
+/* =========================================
+   Centered Status Bar
+========================================= */
+
+.status-bar {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* =========================================
+   Disable Font Ligatures
+========================================= */
+
+body,
+.markdown-source-view,
+.markdown-preview-view,
+.cm-editor {
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "calt" 0;
+}
+
+
+/* =========================================
+   Remove Fold Header Arrow
+========================================= */
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator,
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+    display: none;
+}
+
+.markdown-source-view.mod-cm6 .cm-foldGutter {
+    display: none;
+}

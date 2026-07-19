@@ -1,0 +1,108 @@
+/* =========================================
+   Adds button classes for the "buttons"
+   plugin. You do not have to use them
+   the way I have; just use the class to
+   use the style. Ex: add-note
+========================================= */
+
+/* =========================================
+   Add Note Button
+========================================= */
+
+button.add-note {
+    background: linear-gradient(
+        135deg,
+        rgba(95,175,122,0.25),
+        rgba(40,120,120,0.20)
+    );
+
+    border: 1px solid rgba(95,175,122,0.60);
+    border-radius: 10px;
+
+    color: #DDF2E3;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 4px 14px rgba(0,0,0,0.25);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================
+   Overview Button
+========================================= */
+
+button.overview {
+    background: linear-gradient(
+        135deg,
+        rgba(245,242,232,0.22),
+        rgba(210,215,205,0.14)
+    );
+
+    border: 1px solid rgba(245,242,232,0.55);
+    border-radius: 10px;
+
+    color: #FFFDF5;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.10),
+        0 4px 14px rgba(0,0,0,0.25);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================
+   Glossary Button
+========================================= */
+
+button.glossary {
+    background: linear-gradient(
+        135deg,
+        rgba(210,180,135,0.24),
+        rgba(170,130,85,0.16)
+    );
+
+    border: 1px solid rgba(230,168,92,0.50);
+    border-radius: 10px;
+
+    color: #F2DDB8;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 4px 14px rgba(0,0,0,0.25);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.2s ease;
+}
+
+/* =========================================
+   Search Button
+========================================= */
+
+button.search {
+    background: linear-gradient(
+        135deg,
+        rgba(77,159,184,0.25),
+        rgba(40,120,120,0.20)
+    );
+
+    border: 1px solid rgba(77,159,184,0.60);
+    border-radius: 10px;
+
+    color: #D8F1F5;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 4px 14px rgba(0,0,0,0.25);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.2s ease;
+}
