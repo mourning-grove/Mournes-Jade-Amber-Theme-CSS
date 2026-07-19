@@ -7,6 +7,11 @@
     as a dependency instead.
 */
 
+/*
+    This file makes use of the Style Settings plugin. 
+    My theme will be disabled by default, so this is a hard requirement.
+*/
+
 /* @settings
 
 name: Infobox Callouts
