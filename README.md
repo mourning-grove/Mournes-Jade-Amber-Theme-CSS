@@ -21,8 +21,6 @@ Special thanks to:
 
 ### MCL Multi Column
 
-**Created and maintained by the original developer.**
-
 This repository does not include a copy of this file. Hosting it here would be redundant and would take away from the original developer's work.
 
 You can find the official version here:
