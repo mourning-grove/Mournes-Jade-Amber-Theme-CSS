@@ -8,12 +8,9 @@
 ========================================= */
 
 .callout {
-
   --glass-radius: 12px;
-
   --glass-surface: rgba(17, 24, 39, 0.18);
-
-  --glass-shadow: rgba(0,0,0,.32);
+  --glass-shadow: rgba(0, 0, 0, .32);
 
   --glass-border:
     color-mix(
@@ -23,8 +20,7 @@
     );
 
   --glass-edge:
-    rgba(255,255,255,.08);
-
+    rgba(255, 255, 255, .08);
 
   color: var(--text-normal);
 
@@ -37,796 +33,473 @@
       rgba(var(--callout-color), .08)
     );
 
-
   border:
-
     .5px solid var(--glass-border);
 
-
   border-radius:
-
     var(--glass-radius);
 
-
   box-shadow:
-
     0 12px 28px var(--glass-shadow),
-
     0 0 0 .5px var(--glass-edge) inset;
 
-
   backdrop-filter:
-
     blur(20px)
-
     saturate(160%);
-
 
   -webkit-backdrop-filter:
-
     blur(20px)
-
     saturate(160%);
 
-
-  overflow:hidden;
-
-  padding:0;
-
-  position:relative;
-
-  transition:none;
-
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  transition: none;
 }
-
 
 
 /* =====================================================
-   Glass-Like Reflection 
-   (Updated since reddit post to be more readable)
+   Glass-Like Reflection
 ===================================================== */
 
-
 .callout::before {
+  content: "";
 
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  pointer-events:none;
-
-  border-radius:inherit;
-
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
 
   background:
-
     radial-gradient(
-      90% 140% at 12% -35%,
-      rgba(255,255,255,.115),
-      transparent 44%
+      110% 165% at 18% -45%,
+      rgba(255,255,255,.085) 0%,
+      rgba(255,255,255,.045) 24%,
+      transparent 56%
     ),
 
-
     radial-gradient(
-      80% 110% at 100% 120%,
-      rgba(255,255,255,.065),
-      transparent 48%
+      95% 125% at 105% 115%,
+      rgba(255,255,255,.035) 0%,
+      transparent 62%
     ),
 
-
     radial-gradient(
-      48% 70% at 78% 22%,
-      rgba(var(--callout-color),.085),
-      transparent 54%
+      60% 85% at 82% 24%,
+      rgba(var(--callout-color), .045) 0%,
+      transparent 68%
     ),
-
 
     linear-gradient(
-      104deg,
-      transparent 7%,
-      rgba(255,255,255,.020) 15%,
-      transparent 25%,
+      108deg,
+      transparent 8%,
+      rgba(255,255,255,.020) 18%,
+      rgba(255,255,255,.012) 28%,
+      transparent 42%,
       transparent 62%,
-      rgba(var(--callout-color),.060) 76%,
-      transparent 91%
+      rgba(var(--callout-color),.028) 82%,
+      transparent 96%
     ),
 
-
     conic-gradient(
-      from 215deg at 18% 30%,
-
+      from 225deg at 30% 34%,
       transparent 0deg,
-
-      rgba(255,255,255,.070) 24deg,
-
-      transparent 58deg,
-
-      rgba(var(--callout-color),.065) 92deg,
-
-      transparent 132deg,
-
+      rgba(255,255,255,.022) 18deg,
+      rgba(255,255,255,.012) 42deg,
+      transparent 82deg,
+      rgba(var(--callout-color),.020) 108deg,
+      rgba(var(--callout-color),.010) 136deg,
+      transparent 172deg,
       transparent 360deg
     );
 
-
-  mix-blend-mode:screen;
-
-  opacity:1;
-
+  mix-blend-mode: screen;
+  opacity: .9;
 }
-
-
-
-
-.callout::after {
-
-  content:"";
-
-  position:absolute;
-
-  inset:1px;
-
-  pointer-events:none;
-
-  border-radius:
-
-    calc(var(--glass-radius) - 1px);
-
-
-  border-top:
-
-    .5px solid rgba(255,255,255,.14);
-
-
-  border-left:
-
-    .5px solid rgba(255,255,255,.06);
-
-
-  opacity:.70;
-
-}
-
 
 
 /* =====================================================
    TITLE AREA
 ===================================================== */
 
-
 .callout > .callout-title {
+  min-height: 42px;
 
-  min-height:42px;
+  padding: 11px 16px;
 
-  padding:11px 16px;
+  color: var(--text-normal);
+  background: transparent;
+  border-bottom: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  color:var(--text-normal);
+  gap: 6px;
 
-  background:transparent;
-
-  border-bottom:0;
-
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-
-  gap:6px;
-
-
-  position:relative;
-
-  z-index:1;
-
+  position: relative;
+  z-index: 1;
 }
-
-
 
 
 .callout > .callout-title::before {
+  content: "";
 
-  content:"";
+  position: absolute;
 
-  position:absolute;
+  left: 50%;
+  bottom: -5px;
 
-  left:50%;
+  width: min(58%,580px);
+  height: 13px;
 
-  bottom:-5px;
-
-
-  width:min(58%,580px);
-
-  height:13px;
-
-
-  transform:translateX(-50%);
-
+  transform: translateX(-50%);
 
   background:
-
     radial-gradient(
-
       ellipse at center,
-
       rgba(0,0,0,.34),
-
       rgba(var(--callout-color),.13) 42%,
-
       transparent 72%
-
     );
 
-
-  filter:blur(6px);
-
-  opacity:.48;
-
+  filter: blur(6px);
+  opacity: .48;
 }
-
-
 
 
 .callout > .callout-title::after {
+  content: "";
 
-  content:"";
+  position: absolute;
 
-  position:absolute;
+  left: 50%;
+  bottom: 0;
 
-  left:50%;
+  width: min(62%,620px);
+  height: 1px;
 
-  bottom:0;
-
-
-  width:min(62%,620px);
-
-  height:1px;
-
-
-  transform:translateX(-50%);
-
+  transform: translateX(-50%);
 
   background:
-
     linear-gradient(
-
       90deg,
-
       transparent,
-
       rgba(var(--callout-color),.11) 24%,
-
       rgba(255,255,255,.13) 50%,
-
       rgba(var(--callout-color),.11) 76%,
-
       transparent
-
     );
 
-
-  opacity:.75;
-
+  opacity: .75;
 }
-
-
-
 /* =====================================================
    ICON
 ===================================================== */
 
-
 .callout > .callout-title .callout-icon {
-
   color:
-
     rgb(var(--callout-color));
 
-
   filter:
-
     drop-shadow(
-      0 0 8px rgba(var(--callout-color),.42)
+      0 0 8px rgba(var(--callout-color), .42)
     );
-
 }
-
 
 
 /* =====================================================
    TITLE TEXT
 ===================================================== */
 
-
 .callout > .callout-title .callout-title-inner {
-
   color:
-
     rgb(var(--callout-color));
 
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: 0;
 
-  font-size:.9rem;
-
-  font-weight:800;
-
-  letter-spacing:0;
-
-
-  text-align:center;
-
+  text-align: center;
 
   text-shadow:
-
-    0 0 14px rgba(var(--callout-color),.22);
-
+    0 0 14px rgba(var(--callout-color), .22);
 }
-
 
 
 /* =====================================================
    CONTENT
 ===================================================== */
 
-
 .callout > .callout-content {
-
   padding:
-
     12px 16px 14px;
 
-
-  position:relative;
-
-  z-index:1;
-
+  position: relative;
+  z-index: 1;
 }
+
 
 /* =====================================================
    CONTENT SPACING
 ===================================================== */
 
-
 .callout > .callout-content :is(p, ul, ol) {
-
-  margin-top:0;
-
+  margin-top: 0;
 }
 
 
 .callout > .callout-content :is(ul, ol) {
-
-  margin-bottom:0;
-
+  margin-bottom: 0;
 }
-
 
 
 /* =====================================================
    LIST STYLING
 ===================================================== */
 
-
 .callout > .callout-content ul,
 .callout > .callout-content ol {
-
-  list-style:none;
-
-  padding-left:0;
-
+  list-style: none;
+  padding-left: 0;
 }
-
 
 
 .callout > .callout-content li {
+  line-height: 1.42;
+  margin: 5px 0;
+  padding-left: 17px;
 
-  line-height:1.42;
-
-  margin:5px 0;
-
-  padding-left:17px;
-
-  position:relative;
-
+  position: relative;
 }
-
 
 
 .callout > .callout-content li::before {
+  content: "";
 
-  content:"";
+  position: absolute;
 
+  top: .74em;
+  left: 2px;
 
-  position:absolute;
+  width: 6px;
+  height: 6px;
 
-  top:.74em;
-
-  left:2px;
-
-
-  width:6px;
-
-  height:6px;
-
-
-  border-radius:999px;
-
+  border-radius: 999px;
 
   background:
-
     rgb(var(--callout-color));
 
-
   box-shadow:
-
-    0 0 9px rgba(var(--callout-color),.55);
-
+    0 0 9px rgba(var(--callout-color), .55);
 
   transform:
-
     translateY(-50%);
 
-
   transition:
-
     background-color .1s ease-out,
-
     box-shadow .1s ease-out,
-
     transform .1s ease-out;
-
 }
-
 
 
 /* Nested lists */
 
-
 .callout > .callout-content :is(ul,ol)
 :is(ul,ol) {
-
   border-left:
-
-    1px solid rgba(var(--callout-color),.20);
-
+    1px solid rgba(var(--callout-color), .20);
 
   margin:
-
     5px 0 6px 9px;
 
-
   padding-left:
-
     13px;
-
 }
-
 
 
 /* =====================================================
    LINK STYLE
 ===================================================== */
 
-
 .callout > .callout-content
 :is(a.internal-link,a.external-link) {
-
-  border-radius:6px;
-
+  border-radius: 6px;
 
   color:
-
     color-mix(
-
       in srgb,
-
       rgb(var(--callout-color)) 40%,
-
       var(--text-normal)
-
     );
 
+  display: inline-block;
 
-  display:inline-block;
+  margin: 0 -2px;
+  padding: 1px 5px;
 
+  text-decoration: none;
 
-  margin:0 -2px;
-
-  padding:1px 5px;
-
-
-  text-decoration:none;
-
-
-  position:relative;
-
+  position: relative;
 
   transition:
-
     background .10s ease-out,
-
     box-shadow .10s ease-out,
-
     color .10s ease-out,
-
     filter .10s ease-out,
-
     text-shadow .10s ease-out;
-
 }
-
-
-
 /* Hover */
-
 
 .callout > .callout-content
 :is(a.internal-link,a.external-link):hover {
-
-
   background:
-
-    rgba(var(--callout-color),.055);
-
-
+    rgba(var(--callout-color), .055);
 
   box-shadow:
-
-
-    0 0 0 .5px rgba(var(--callout-color),.28),
-
-
-    0 0 10px rgba(var(--callout-color),.28),
-
-
-    0 0 26px rgba(var(--callout-color),.30);
-
-
+    0 0 0 .5px rgba(var(--callout-color), .28),
+    0 0 10px rgba(var(--callout-color), .28),
+    0 0 26px rgba(var(--callout-color), .30);
 
   color:
-
     rgb(var(--callout-color));
 
-
-
   filter:
-
     drop-shadow(
-      0 0 8px rgba(var(--callout-color),.22)
+      0 0 8px rgba(var(--callout-color), .22)
     );
 
-
-
   text-shadow:
-
-
-    0 0 7px rgba(var(--callout-color),.48),
-
-
-    0 0 18px rgba(var(--callout-color),.26);
-
+    0 0 7px rgba(var(--callout-color), .48),
+    0 0 18px rgba(var(--callout-color), .26);
 }
-
 
 
 /* Keyboard focus */
 
-
 .callout > .callout-content
 :is(a.internal-link,a.external-link):focus-visible {
-
-
   outline:
-
-    2px solid rgba(var(--callout-color),.58);
-
+    2px solid rgba(var(--callout-color), .58);
 
   outline-offset:
-
     2px;
-
 }
-
 
 
 /* Unresolved links */
 
-
 .callout > .callout-content a.is-unresolved {
-
-
   color:
-
     color-mix(
-
       in srgb,
-
       rgb(var(--callout-color)) 70%,
-
       var(--text-muted)
-
     );
 
-
-  opacity:.86;
-
+  opacity: .86;
 }
-
 
 
 /* =====================================================
    LIST HOVER GLOW
 ===================================================== */
 
-
 .callout > .callout-content li:has(
   > :is(a.internal-link,a.external-link):is(:hover,:focus-visible)
 )::before {
-
-
   background:
-
     rgb(var(--callout-color));
 
-
   box-shadow:
-
-
-    0 0 0 4px rgba(var(--callout-color),.14),
-
-
-    0 0 9px rgba(var(--callout-color),.82),
-
-
-    0 0 22px rgba(var(--callout-color),.55);
-
-
+    0 0 0 4px rgba(var(--callout-color), .14),
+    0 0 9px rgba(var(--callout-color), .82),
+    0 0 22px rgba(var(--callout-color), .55);
 
   transform:
-
     translateY(-50%)
-
     scale(1.16);
-
 }
-
 
 
 /* =====================================================
    SCROLLBAR
 ===================================================== */
 
-
 .callout > .callout-content::-webkit-scrollbar {
-
-  width:10px;
-
+  width: 10px;
 }
-
 
 
 .callout > .callout-content::-webkit-scrollbar-track {
-
   background:
-
     rgba(255,255,255,.04);
-
 }
-
 
 
 .callout > .callout-content::-webkit-scrollbar-thumb {
-
-
   background:
-
-    rgba(var(--callout-color),.26);
-
-
+    rgba(var(--callout-color), .26);
 
   border:
-
     2px solid transparent;
 
+  border-radius: 999px;
 
-  border-radius:999px;
-
-
-  background-clip:padding-box;
-
+  background-clip: padding-box;
 }
-
 
 
 /* =====================================================
    LIGHT MODE
 ===================================================== */
 
-
 body.theme-light .callout {
-
-
   --glass-surface:
-
     rgba(255,255,255,.14);
 
-
-
   --glass-edge:
-
     rgba(255,255,255,.55);
 
-
-
   --glass-shadow:
-
     rgba(23,32,51,.10);
-
-
-
 }
-
 
 
 /* =====================================================
    DARK MODE
 ===================================================== */
 
-
 body.theme-dark .callout {
-
-
   --glass-surface:
-
     rgba(17,24,39,.18);
 
-
-
   --glass-edge:
-
     rgba(255,255,255,.08);
 
-
-
   --glass-shadow:
-
     rgba(0,0,0,.32);
-
-
-
 }
-
 
 
 /* =====================================================
    REDUCED MOTION
 ===================================================== */
 
-
-@media (prefers-reduced-motion:reduce) {
-
-
+@media (prefers-reduced-motion: reduce) {
   .callout,
 
   .callout > .callout-content
   :is(a.internal-link,a.external-link) {
-
-
-    transition:none;
-
+    transition: none;
   }
-
-
 }
+
 
 /* =====================================================
    QUOTE CALLOUT COLOR
 ===================================================== */
 
 .callout[data-callout="quote"] {
-  --callout-color: 154, 126,84;
+  --callout-color: 154, 126, 84;
 }
