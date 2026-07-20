@@ -72,49 +72,45 @@
 
   background:
     radial-gradient(
-      110% 165% at 18% -45%,
-      rgba(255,255,255,.085) 0%,
-      rgba(255,255,255,.045) 24%,
-      transparent 56%
+      90% 140% at 12% -35%,
+      rgba(255,255,255,.115),
+      transparent 44%
     ),
 
     radial-gradient(
-      95% 125% at 105% 115%,
-      rgba(255,255,255,.035) 0%,
-      transparent 62%
+      80% 110% at 100% 120%,
+      rgba(255,255,255,.065),
+      transparent 48%
     ),
 
     radial-gradient(
-      60% 85% at 82% 24%,
-      rgba(var(--callout-color), .045) 0%,
-      transparent 68%
+      48% 70% at 78% 22%,
+      rgba(var(--callout-color),.085),
+      transparent 54%
     ),
 
     linear-gradient(
-      108deg,
-      transparent 8%,
-      rgba(255,255,255,.020) 18%,
-      rgba(255,255,255,.012) 28%,
-      transparent 42%,
-      transparent 62%,
-      rgba(var(--callout-color),.028) 82%,
-      transparent 96%
+      104deg,
+      transparent 7%,
+      rgba(255,255,255,.020) 15%,
+      transparent 25%,
+      transparent 2%,
+      rgba(var(--callout-color),.060) 76%,
+      transparent 91%
     ),
 
     conic-gradient(
-      from 225deg at 30% 34%,
+      from 215deg at 18% 30%,
       transparent 0deg,
-      rgba(255,255,255,.022) 18deg,
-      rgba(255,255,255,.012) 42deg,
-      transparent 82deg,
-      rgba(var(--callout-color),.020) 108deg,
-      rgba(var(--callout-color),.010) 136deg,
-      transparent 172deg,
+      rgba(255,255,255,.035) 24deg,
+      transparent 58deg,
+      rgba(var(--callout-color),.03) 92deg,
+      transparent 132deg,
       transparent 360deg
     );
 
   mix-blend-mode: screen;
-  opacity: .9;
+  opacity: 1;
 }
 
 
