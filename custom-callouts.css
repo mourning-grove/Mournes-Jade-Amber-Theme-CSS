@@ -1,6 +1,6 @@
 /* =========================================
    Adds three new callouts
-   Actions + Navigate + Panel 
+   Actions + Navigate + Panel
 ========================================= */
 
 /* =========================================
@@ -8,7 +8,7 @@
 ========================================= */
 
 .callout[data-callout="actions"] {
-    --callout-color: 221, 242, 227;
+    --callout-color: rgb(221, 242, 227);
 
     background: linear-gradient(
         135deg,
@@ -56,7 +56,7 @@
 ========================================= */
 
 .callout[data-callout="navigate"] {
-    --callout-color: 230, 168, 92;
+    --callout-color: rgb(230, 168, 92);
 
     background: linear-gradient(
         135deg,
@@ -98,7 +98,7 @@
 ========================================= */
 
 .callout[data-callout="panel"] {
-    --callout-color: 180, 190, 185;
+    --callout-color: rgb(180, 190, 185);
 
     background: linear-gradient(
         135deg,
