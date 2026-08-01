@@ -1,5 +1,5 @@
 /* =========================================
-   Changes the styles of obsidian's 
+   Changes the styles of obsidian's
    default callouts.
 ========================================= */
 
@@ -15,7 +15,7 @@
   --glass-border:
     color-mix(
       in srgb,
-      rgb(var(--callout-color)) 22%,
+      var(--callout-color) 22%,
       transparent
     );
 
@@ -29,8 +29,8 @@
   background-image:
     linear-gradient(
       0deg,
-      rgba(var(--callout-color), .08),
-      rgba(var(--callout-color), .08)
+      color-mix(in srgb, var(--callout-color) 8%, transparent),
+      color-mix(in srgb, var(--callout-color) 8%, transparent)
     );
 
   border:
@@ -85,7 +85,7 @@
 
     radial-gradient(
       48% 70% at 78% 22%,
-      rgba(var(--callout-color),.085),
+      color-mix(in srgb, var(--callout-color) 8.5%, transparent),
       transparent 54%
     ),
 
@@ -95,7 +95,7 @@
       rgba(255,255,255,.020) 15%,
       transparent 25%,
       transparent 2%,
-      rgba(var(--callout-color),.060) 76%,
+      color-mix(in srgb, var(--callout-color) 6%, transparent) 76%,
       transparent 91%
     ),
 
@@ -104,7 +104,7 @@
       transparent 0deg,
       rgba(255,255,255,.035) 24deg,
       transparent 58deg,
-      rgba(var(--callout-color),.03) 92deg,
+      color-mix(in srgb, var(--callout-color) 3%, transparent) 92deg,
       transparent 132deg,
       transparent 360deg
     );
@@ -155,7 +155,7 @@
     radial-gradient(
       ellipse at center,
       rgba(0,0,0,.34),
-      rgba(var(--callout-color),.13) 42%,
+      color-mix(in srgb, var(--callout-color) 13%, transparent) 42%,
       transparent 72%
     );
 
@@ -181,25 +181,27 @@
     linear-gradient(
       90deg,
       transparent,
-      rgba(var(--callout-color),.11) 24%,
+      color-mix(in srgb, var(--callout-color) 11%, transparent) 24%,
       rgba(255,255,255,.13) 50%,
-      rgba(var(--callout-color),.11) 76%,
+      color-mix(in srgb, var(--callout-color) 11%, transparent) 76%,
       transparent
     );
 
   opacity: .75;
 }
+
+
 /* =====================================================
    ICON
 ===================================================== */
 
 .callout > .callout-title .callout-icon {
   color:
-    rgb(var(--callout-color));
+    var(--callout-color);
 
   filter:
     drop-shadow(
-      0 0 8px rgba(var(--callout-color), .42)
+      0 0 8px color-mix(in srgb, var(--callout-color) 42%, transparent)
     );
 }
 
@@ -210,7 +212,7 @@
 
 .callout > .callout-title .callout-title-inner {
   color:
-    rgb(var(--callout-color));
+    var(--callout-color);
 
   font-size: .9rem;
   font-weight: 800;
@@ -219,7 +221,7 @@
   text-align: center;
 
   text-shadow:
-    0 0 14px rgba(var(--callout-color), .22);
+    0 0 14px color-mix(in srgb, var(--callout-color) 22%, transparent);
 }
 
 
@@ -284,10 +286,10 @@
   border-radius: 999px;
 
   background:
-    rgb(var(--callout-color));
+    var(--callout-color);
 
   box-shadow:
-    0 0 9px rgba(var(--callout-color), .55);
+    0 0 9px color-mix(in srgb, var(--callout-color) 55%, transparent);
 
   transform:
     translateY(-50%);
@@ -304,7 +306,7 @@
 .callout > .callout-content :is(ul,ol)
 :is(ul,ol) {
   border-left:
-    1px solid rgba(var(--callout-color), .20);
+    1px solid color-mix(in srgb, var(--callout-color) 20%, transparent);
 
   margin:
     5px 0 6px 9px;
@@ -325,7 +327,7 @@
   color:
     color-mix(
       in srgb,
-      rgb(var(--callout-color)) 40%,
+      var(--callout-color) 40%,
       var(--text-normal)
     );
 
@@ -345,29 +347,31 @@
     filter .10s ease-out,
     text-shadow .10s ease-out;
 }
+
+
 /* Hover */
 
 .callout > .callout-content
 :is(a.internal-link,a.external-link):hover {
   background:
-    rgba(var(--callout-color), .055);
+    color-mix(in srgb, var(--callout-color) 5.5%, transparent);
 
   box-shadow:
-    0 0 0 .5px rgba(var(--callout-color), .28),
-    0 0 10px rgba(var(--callout-color), .28),
-    0 0 26px rgba(var(--callout-color), .30);
+    0 0 0 .5px color-mix(in srgb, var(--callout-color) 28%, transparent),
+    0 0 10px color-mix(in srgb, var(--callout-color) 28%, transparent),
+    0 0 26px color-mix(in srgb, var(--callout-color) 30%, transparent);
 
   color:
-    rgb(var(--callout-color));
+    var(--callout-color);
 
   filter:
     drop-shadow(
-      0 0 8px rgba(var(--callout-color), .22)
+      0 0 8px color-mix(in srgb, var(--callout-color) 22%, transparent)
     );
 
   text-shadow:
-    0 0 7px rgba(var(--callout-color), .48),
-    0 0 18px rgba(var(--callout-color), .26);
+    0 0 7px color-mix(in srgb, var(--callout-color) 48%, transparent),
+    0 0 18px color-mix(in srgb, var(--callout-color) 26%, transparent);
 }
 
 
@@ -376,7 +380,7 @@
 .callout > .callout-content
 :is(a.internal-link,a.external-link):focus-visible {
   outline:
-    2px solid rgba(var(--callout-color), .58);
+    2px solid color-mix(in srgb, var(--callout-color) 58%, transparent);
 
   outline-offset:
     2px;
@@ -389,7 +393,7 @@
   color:
     color-mix(
       in srgb,
-      rgb(var(--callout-color)) 70%,
+      var(--callout-color) 70%,
       var(--text-muted)
     );
 
@@ -405,12 +409,12 @@
   > :is(a.internal-link,a.external-link):is(:hover,:focus-visible)
 )::before {
   background:
-    rgb(var(--callout-color));
+    var(--callout-color);
 
   box-shadow:
-    0 0 0 4px rgba(var(--callout-color), .14),
-    0 0 9px rgba(var(--callout-color), .82),
-    0 0 22px rgba(var(--callout-color), .55);
+    0 0 0 4px color-mix(in srgb, var(--callout-color) 14%, transparent),
+    0 0 9px color-mix(in srgb, var(--callout-color) 82%, transparent),
+    0 0 22px color-mix(in srgb, var(--callout-color) 55%, transparent);
 
   transform:
     translateY(-50%)
@@ -435,7 +439,7 @@
 
 .callout > .callout-content::-webkit-scrollbar-thumb {
   background:
-    rgba(var(--callout-color), .26);
+    color-mix(in srgb, var(--callout-color) 26%, transparent);
 
   border:
     2px solid transparent;
@@ -479,23 +483,9 @@ body.theme-dark .callout {
 
 
 /* =====================================================
-   REDUCED MOTION
-===================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  .callout,
-
-  .callout > .callout-content
-  :is(a.internal-link,a.external-link) {
-    transition: none;
-  }
-}
-
-
-/* =====================================================
    QUOTE CALLOUT COLOR
 ===================================================== */
 
 .callout[data-callout="quote"] {
-  --callout-color: 154, 126, 84;
+  --callout-color: rgb(154, 126, 84);
 }
